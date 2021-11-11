@@ -62,7 +62,7 @@ At the end of training, cumulative reward is reached to 0.614. Since the environ
 
 <img src="/Images/PPO_TB.jpg">
 
-Please note that, there are 3 trained models are in "Assets -> Trained Models" and they are named as Shooter-XXX.onnx. The numbers in model names represents how many steps the agent trained for. So, higher number means more trained and better model.
+Please note that, there are 3 trained models are in "Assets -> Trained Models" and they are named as "Shooter-XXX.onnx". The numbers in model names represents how many steps the agent trained for. So, higher number means more trained and better model.
 
 Additionally, you can train your own agent by following [these steps.](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-ML-Agents.md)
 

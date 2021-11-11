@@ -54,7 +54,7 @@ To change the behavior find "Assets -> Prefabs -> Agent -> Inspector -> Behavior
 
 ## Training
 
-Currently, the agent is trained by using PPO (Proximal Policy Optimization) with extrinsic rewards enabled for more than 1500 episodes. Neural network has 3 hidden layers with 256 hidden units.
+Currently, the agent is trained by using PPO (Proximal Policy Optimization) with extrinsic rewards enabled for more than 1500 episodes. Neural network has 3 hidden layers with 256 hidden units. You can find detailed traning statistics below.
 
 <img src="/Images/PPO_TB.jpg">
 
@@ -65,3 +65,5 @@ Additionally, you can train your own agent by following [these steps.](https://g
 ## Roadmap
 
 1) More models which trained by using different methods such as SAC (Soft Actor-Critic) and BC (Behavioral Clonning) will be added.
+2) Comparison of different models will be added.
+3) An Android build for inference will be provided.

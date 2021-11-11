@@ -54,13 +54,31 @@ To change the behavior find "Assets -> Prefabs -> Agent -> Inspector -> Behavior
 
 ## Training
 
-Currently, the agent is trained by using PPO (Proximal Policy Optimization) with extrinsic rewards enabled for more than 1500 episodes. Neural network has 3 hidden layers with 256 hidden units. You can find detailed traning statistics below.
+Currently, the agent is trained by using PPO (Proximal Policy Optimization) with extrinsic rewards enabled for more than 1500 episodes (more than 4 hours in my machine). Neural network has 3 hidden layers with 256 hidden units. During training, 8 agents trained at the same time for a faster and more stable training process. Following video was recorded during training.
+
+https://user-images.githubusercontent.com/40580957/141371446-d637404a-44f4-45bb-bf9f-de7cfdfa719c.mp4
+
+At the end of training, cumulative reward is reached to 0.614. Since the environment has too much penalties, 0.614 is an acceptable score for this scenario. Please remember that every missing shot results with a penalty of 0.1. You can find detailed traning statistics below.
 
 <img src="/Images/PPO_TB.jpg">
 
-There are 3 trained models are in "Assets -> Trained Models" and they are named as Shooter-XXX.onnx. The numbers in model names represents how many steps the agent trained for. So, higher number means more trained and better model.
+Please note that, there are 3 trained models are in "Assets -> Trained Models" and they are named as Shooter-XXX.onnx. The numbers in model names represents how many steps the agent trained for. So, higher number means more trained and better model.
 
 Additionally, you can train your own agent by following [these steps.](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-ML-Agents.md)
+
+## Inference
+
+Following video shows how the agent behaves to complete the mission.
+
+https://user-images.githubusercontent.com/40580957/141372999-bb1f23b8-1dd5-426d-8349-57c10f5d693f.mp4
+
+## Test
+
+You can test both environment and the agent in heuristic behavior. You can control the agent by using following keys:
+
+1) "Space" -> fire
+2) "S" -> move forward, "W" -> move forward faster
+3) "A" -> rotate left, "D" -> rotate right
 
 ## Roadmap
 

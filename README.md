@@ -22,6 +22,10 @@ You can see the environment below. The wall intentionally desinged half-transpar
 
 <img src="/Images/Environment.jpg" width="900" height="400">
 
+## Goal
+
+Agent should hit the target and should not hit the non-target. Agent should not drop down from ground.
+
 ## Actions
 
 There are 3 kinds of actions that agent can do:
@@ -41,6 +45,14 @@ Please note that, negative rewards are used as penalties in reinforcement learni
 3) **Dropping from platform (going out of area):** -1
 4) **Missing the target while firing:** -0.1 (it should be penaltized for misses, otherwise it keeps firing all time)
 5) **Both rotating and moving:** -0.001 (to force it to complete the mission in as less steps as possible)
+
+## Observations
+
+The agent observes the environment by using 2 ray perceptions sensors and vector observations.
+
+1) **Short range ray perceptions sensor:** observes ground to prevent droping down from ground.
+2) **Long range ray perceptions sensor:** observes wall, target and non-target.
+3) **Vector observations:** observes agent's positon, rotation and velocity, target positon, distance to the target, etc.
 
 ## Behaviors
 

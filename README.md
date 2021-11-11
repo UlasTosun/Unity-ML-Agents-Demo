@@ -56,10 +56,12 @@ To change the behavior find "Assets -> Prefabs -> Agent -> Inspector -> Behavior
 
 Currently, the agent is trained by using PPO (Proximal Policy Optimization) with extrinsic rewards enabled for more than 1500 episodes. Neural network has 3 hidden layers with 256 hidden units.
 
-There are 3 trained models are in "Assets -> Trained Models" and they are named as Shooter-XXX.onnx. The numbers in model names represents how many steps the agent trained for. So, higher number means more trained and better model.
+<img src="/Images/PPO_TB.jpg">
 
-More models which trained by using different methods such as SAC (Soft Actor-Critic) and BC (Behavioral Clonning) will be added soon.
+There are 3 trained models are in "Assets -> Trained Models" and they are named as Shooter-XXX.onnx. The numbers in model names represents how many steps the agent trained for. So, higher number means more trained and better model.
 
 Additionally, you can train your own agent by following [these steps.](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-ML-Agents.md)
 
+## Roadmap
 
+1) More models which trained by using different methods such as SAC (Soft Actor-Critic) and BC (Behavioral Clonning) will be added.

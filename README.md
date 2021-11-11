@@ -64,6 +64,6 @@ Additionally, you can train your own agent by following [these steps.](https://g
 
 ## Roadmap
 
-1) More models which trained by using different methods such as SAC (Soft Actor-Critic) and BC (Behavioral Clonning) will be added.
+1) More models which are trained by using different methods such as SAC (Soft Actor-Critic) and BC (Behavioral Clonning) will be added.
 2) Comparison of different models will be added.
 3) An Android build for inference will be provided.

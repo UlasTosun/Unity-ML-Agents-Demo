@@ -76,7 +76,7 @@ Each architecture is trained for approximately 1.4M steps (more than 3 hours for
 
 https://user-images.githubusercontent.com/40580957/141371446-d637404a-44f4-45bb-bf9f-de7cfdfa719c.mp4
 
-Please note that, trained models for all architectures are in "Assets -> Trained Models". Additionally, you can train your own agent by following [these steps.](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-ML-Agents.md)
+Please note that, trained models for all architectures are in "Assets -> Trained Models -> PPO". Additionally, you can train your own agent by following [these steps.](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-ML-Agents.md)
 
 ## Inference
 

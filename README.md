@@ -66,21 +66,23 @@ To change the behavior find "Assets -> Prefabs -> Agent -> Inspector -> Behavior
 
 ## Training
 
-Currently, the agent is trained by using PPO (Proximal Policy Optimization) with extrinsic rewards enabled for more than 2500 episodes (more than 4 hours in my machine). Neural network has 3 hidden layers with 256 hidden units. During training, 8 agents trained at the same time for a faster and more stable training process. Following video was recorded during training.
+The agent is trained by using 3 different architectures with extrinsic rewards are enabled. The base network for each architecture is PPO and it has 2 hidden layers with 256 hidden units. You can find cumulative reward plot for each architecture in the following image. The first architecture is PPO + Curiosity (red), second one is PPO + Curiosity + GAIL (light blue) and the last one is PPO + Curiosity + GAIL + BC (yellow). GAIL stands for Generative Adversarial Imitation Learning and BC stands for Behavioral Cloning. Both Curiosity and GAIL modules has 128 hidden units with 0.02 strength. BC module has 0.3 strength and was active only for the first 150k steps.
+
+<img src="/Images/Comparison.jpg">
+
+As you can see, final cumulative reward for each models is between 0.6 - 0.7. This range may seen as a low value for cumulative reward, however please note that the environment has too many penalties (please check rewards section and penalties). PPO + Curiosity + GAIL + BC has the best cumulative reward. Both PPO + Curiosity and PPO + Curiosity + GAIL have similar cumulative rewards, however PPO + Curiosity + GAIL is more stable. Since the environment is not too complex using GAIL and BC does not have dramatic contrubitons on cumulative reward.
+
+Each architecture is trained for approximately 1.4M steps (more than 3 hours for each in my machine) and 8 agents trained at the same time for a faster and more stable training process. Following video was recorded during training.
 
 https://user-images.githubusercontent.com/40580957/141371446-d637404a-44f4-45bb-bf9f-de7cfdfa719c.mp4
 
-At the end of training, cumulative reward is reached to 0.614. Since the environment has too much penalties, 0.614 is an acceptable score for this scenario. Please remember that every missing shot results with a penalty of 0.1. You can find detailed traning statistics below.
-
-<img src="/Images/PPO_TB.jpg">
-
-Please note that, there are 3 trained models are in "Assets -> Trained Models" and they are named as "Shooter-XXX.onnx". The numbers in model names represents how many steps the agent trained for. So, higher number means more trained and better model.
-
-Additionally, you can train your own agent by following [these steps.](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-ML-Agents.md)
+Please note that, trained models for all architectures are in "Assets -> Trained Models". Additionally, you can train your own agent by following [these steps.](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-ML-Agents.md)
 
 ## Inference
 
-Following video shows how the agent behaves to complete the mission.
+Following video shows how the agent behaves to complete the mission by using PPO + Curiosity model.
+
+To change the model, assign desired model to "Assets -> Prefabs -> Agent -> Inspector -> Behavior Parameters -> Model"
 
 https://user-images.githubusercontent.com/40580957/141372999-bb1f23b8-1dd5-426d-8349-57c10f5d693f.mp4
 
@@ -94,6 +96,4 @@ You can test both environment and the agent in heuristic behavior. You can contr
 
 ## Roadmap
 
-1) More models which are trained by using different methods such as SAC (Soft Actor-Critic) and BC (Behavioral Clonning) will be added.
-2) Comparison of different models will be added.
-3) An Android build for inference will be provided.
+An Android build will be provided for inference.

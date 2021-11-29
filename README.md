@@ -1,6 +1,6 @@
 # Unity-ML-Agents-Demo
 
-This is a template and demo project for Unity ML-Agents Toolkit. **[You can find complete Unity project folder in here.](https://drive.google.com/drive/folders/1i45Nl_Ew3kjEa1NUfoKRF3wzHv-Z00bp?usp=sharing)** Since, GitHub has file count and size limitations, I have uploaded the project to Google Drive.
+This is a template and demo project for Unity ML-Agents Toolkit. **[You can find complete Unity and APK files project folder in here.](https://drive.google.com/drive/folders/1i45Nl_Ew3kjEa1NUfoKRF3wzHv-Z00bp?usp=sharing)** Since, GitHub has file count and size limitations, I have uploaded the project to Google Drive.
 
 Project has been developed on Unity 2021.2.0f1 by using ML Agents Package 2.0.0. If you are facing with errors, **please check your Unity and package versions**. Please keep in my that using different versions may result with errors.
 
@@ -94,6 +94,6 @@ You can test both environment and the agent in heuristic behavior. You can contr
 2) "S" -> move forward, "W" -> move forward faster
 3) "A" -> rotate left, "D" -> rotate right
 
-## Roadmap
+## Android Build
 
-An Android build will be provided for inference.
+

@@ -94,6 +94,9 @@ You can test both environment and the agent in heuristic behavior. You can contr
 2) "S" -> move forward, "W" -> move forward faster
 3) "A" -> rotate left, "D" -> rotate right
 
-## Android Build
+## Android App
 
+Following screenshots are taken from Android app which is developed for this project. You can use the app in both inference (upper image) and heuristic (lower image) modes. Also, you can switch between trained models during inference mode.
 
+<img src="/Images/Inference_SS.jpg" width="900" height="450">
+<img src="/Images/Heuristic_SS.jpg" width="900" height="450">
